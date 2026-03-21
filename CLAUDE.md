@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Purpose
 
-This is a personal learning repository for the Scaler.com Backend Engineering Program, covering DSA (modules 5–7), Databases/SQL (module 8), and Low-Level Design (module 9).
+This is a personal learning repository for the Scaler.com Backend Engineering Program, covering DSA, Databases/SQL, and Low-Level Design.
 
 ## Building and Running
 
@@ -18,29 +18,29 @@ javac src/com/scaler/dsa/<topic>/<FileName>.java
 java -cp src com.scaler.dsa.<topic>.<ClassName>
 
 # Example
-javac module-05-advanced-dsa2/src/com/scaler/dsa/searching/BinarySearch.java
-java -cp module-05-advanced-dsa2/src com.scaler.dsa.searching.BinarySearch
+javac dsa-searching-linkedlists/src/com/scaler/dsa/searching/BinarySearch.java
+java -cp dsa-searching-linkedlists/src com.scaler.dsa.searching.BinarySearch
 ```
 
 There is no test framework — each class has an embedded `main()` method with sample cases.
 
 ## Architecture
 
-Each module is self-contained with its own `src/` tree:
+Each folder is self-contained with its own `src/` tree:
 
 ```
-module-05-advanced-dsa2/src/com/scaler/dsa/   ← searching, linkedlist
-module-06-advanced-dsa3/src/com/scaler/dsa/   ← stacks, queues, trees
-module-07-advanced-dsa4/src/com/scaler/dsa/advanced/  ← graphs, dp, greedy, backtracking
-module-08-databases-sql/queries/              ← raw .sql practice files
-module-09-lld-development1/                  ← LLD patterns (planned)
+dsa-searching-linkedlists/src/com/scaler/dsa/   ← searching, linkedlist
+dsa-stacks-queues-trees/src/com/scaler/dsa/     ← stacks, queues, trees
+dsa-graphs-dp-greedy/src/com/scaler/dsa/        ← graphs, dp, greedy, backtracking
+databases-sql/queries/                           ← raw .sql practice files
+low-level-design/                                ← LLD patterns (planned)
 ```
 
-Modules do not share source or depend on each other. All Java code uses only the standard library (`java.util.*`).
+Folders do not share source or depend on each other. All Java code uses only the standard library (`java.util.*`).
 
 ## Code Conventions
 
 - Each topic class (e.g., `BinarySearch.java`, `LinkedListProblems.java`) contains related problem solutions as static methods.
-- `Node.java` / `TreeNode.java` are shared data structure definitions within their module.
+- `Node.java` / `TreeNode.java` are shared data structure definitions within their folder.
 - Time and space complexity are annotated in comments above each method.
 - The `main()` method in each class demonstrates usage and acts as a manual test.
